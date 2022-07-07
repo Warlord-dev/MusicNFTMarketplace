@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 import "hardhat/console.sol";
 
-contract NFTMusicMarketplace is ReentrancyGuard {
+contract Marketplace is ReentrancyGuard {
     // Variables
     address payable public immutable feeAccount; // the account that receives fees
     uint public immutable feePercent; // the fee percentage on sales 
@@ -95,7 +95,34 @@ contract NFTMusicMarketplace is ReentrancyGuard {
             msg.sender
         );
     }
+
     function getTotalPrice(uint _itemId) view public returns(uint){
         return((items[_itemId].price*(100 + feePercent))/100);
+    }
+
+    function fetchItems(uint page) view external returns(Item[] memory) {
+        // default pageSize = 10, firstPage = 0
+        uint startIndex = page * 10;
+        uint endIndex = (startIndex + 10) > itemCount ? itemCount : (startIndex + 9);
+        uint itemsPerPage = endIndex - startIndex + 1;
+        Item[] memory nfts = new Item[](itemsPerPage);
+
+        for (uint i = 0; i < itemsPerPage; i ++) {
+            nfts[i] = items[i + page * 10];
+        }
+
+        return nfts;
+    }
+
+    function fetchMyItems() view external returns(Item[] memory) {
+        Item[] memory myItems = new Item[](itemCount);
+        uint myItemsCount = 0;
+        for (uint i = 0; i < itemCount; i += 1) {
+            if (items[i].seller == msg.sender) {
+                myItems[myItemsCount++] = items[i];
+            }
+        }
+
+        return myItems;
     }
 }

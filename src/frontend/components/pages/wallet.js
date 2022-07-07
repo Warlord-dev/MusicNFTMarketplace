@@ -12,7 +12,6 @@ const Wallet= () => {
     const connectToMetamask = async () => {
         try {
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-            console.log("Account", accounts);
             dispatch(setWalletAccount({ address: accounts[0]}));
         } catch (error) {
         }

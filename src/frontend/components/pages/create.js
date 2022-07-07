@@ -1,30 +1,45 @@
-import React, { Component } from "react";
+import { ethers } from "ethers";
+import React, { Component, useState } from "react";
 import Clock from "../components/Clock";
 import Footer from '../components/footer';
+import MarketplaceAddress from "../../contractsData/Marketplace-address.json";
+import MarketplaceAbi from "../../contractsData/Marketplace.json";
+import { create } from "ipfs-http-client";
+// const client = create('https://ipfs.infura.io:5001/api/v0')
 
-export default class Createpage extends Component {
+const Createpage = () => {
+  const [ files, setFiles ] = useState();
 
-constructor() {
-    super();
-    this.onChange = this.onChange.bind(this);
-    this.state = {
-      files: [],
-    };
-  }
-
-  onChange(e) {
+  const onChange = (e) => {
     var files = e.target.files;
     console.log(files);
     var filesArr = Array.prototype.slice.call(files);
     console.log(filesArr);
     document.getElementById("file_name").style.display = "none";
-    this.setState({ files: [...this.state.files, ...filesArr] });
+    setFiles({ files: [...files, ...filesArr] });
   }
 
-render() {
+  // const uploadToIPFS = async (file) => {
+  //   if (typeof file !== 'undefined') {
+  //     try {
+  //       const result = await client.add(file)
+  //       console.log(result)
+  //       // setImage(`https://ipfs.infura.io/ipfs/${result.path}`)
+  //     } catch (error){
+  //       console.log("ipfs image upload error: ", error)
+  //     }
+  //   }
+  // }
+
+  const createItem = () => {
+    let provider = ethers.getDefaultProvider();
+    const signer = provider.getSigner()
+    let marketplaceContract = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer);
+
+  }
+
     return (
       <div>
-
         <section className='jumbotron breadcumb no-bg'>
           <div className='mainbreadcumb'>
             <div className='container'>
@@ -47,7 +62,7 @@ render() {
 
                       <div className="d-create-file">
                           <p id="file_name">PNG, JPG, GIF, WEBP or MP4. Max 200mb.</p>
-                          {this.state.files.map(x => 
+                          {files.map(x => 
                           <p key="{index}">PNG, JPG, GIF, WEBP or MP4. Max 200mb.{x.name}</p>
                           )}
                           <div className='browse'>
@@ -123,6 +138,7 @@ render() {
 
         <Footer />
       </div>
-   );
-  }
+   )
 }
+
+export default Createpage;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-socks";
-import { header } from 'react-bootstrap';
 import { Link } from '@reach/router';
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useSelector, useDispatch } from 'react-redux';
+import { setWalletAccount } from "../../store/reducer/walletAccountSlice";
 
 
 setDefaultBreakpoints([
@@ -33,10 +33,18 @@ const Header = function () {
     const [openMenu2, setOpenMenu2] = React.useState(false);
     const [openMenu3, setOpenMenu3] = React.useState(false);
     const walletAccount = useSelector((state) => state.walletAccount);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-      console.log("walletAccount in header", walletAccount)
-    }, [walletAccount])
+      if (!walletAccount?.address) {
+        connectToMetamask()
+      }
+    }, [walletAccount]);
+
+    const connectToMetamask = async () => {
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      dispatch(setWalletAccount({ address: accounts[0]} ));
+    }
 
     const handleBtnClick = (): void => {
       setOpenMenu(!openMenu);
@@ -81,6 +89,7 @@ const Header = function () {
       const header = document.getElementById("myHeader");
       const totop = document.getElementById("scroll-to-top");
       const sticky = header.offsetTop;
+
       const scrollCallBack = window.addEventListener("scroll", () => {
           btn_icon(false);
           if (window.pageYOffset > sticky) {
@@ -98,6 +107,7 @@ const Header = function () {
           window.removeEventListener("scroll", scrollCallBack);
         };
     }, []);
+
     return (
     <header id="myHeader" className='navbar white'>
      <div className='container'>

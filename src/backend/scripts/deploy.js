@@ -12,9 +12,12 @@ async function main() {
   const NFTMusic = await ethers.getContractFactory("NFTMusic");
   const nftMusic = await NFTMusic.deploy();
   console.log("musicNFT address: ", nftMusic.address);
-  
+
+  const Marketplace = await ethers.getContractFactory("Marketplace");
+  const marketplace = await Marketplace.deploy(0);
   
   // For each contract, pass the deployed contract and name to this function to save a copy of the contract ABI and address to the front end.
+  saveFrontendFiles(marketplace, "Marketplace");
   saveFrontendFiles(nftMusic, "NFTMusic");
 }
 
