@@ -125,4 +125,17 @@ contract Marketplace is ReentrancyGuard {
 
         return myItems;
     }
+
+    function fetchItemsByAuthor(address authorAddress) view external returns(Item[] memory) {
+        Item[] memory authorItems = new Item[](itemCount);
+
+        uint authorItemsCount = 0;
+        for (uint i = 0; i < itemCount; i += 1) {
+            if (items[i].seller == authorAddress) {
+                authorItems[authorItemsCount++] = items[i];
+            }
+        }
+
+        return authorItems;
+    }
 }

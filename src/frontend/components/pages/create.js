@@ -4,20 +4,15 @@ import Clock from "../components/Clock";
 import Footer from '../components/footer';
 import MarketplaceAddress from "../../contractsData/Marketplace-address.json";
 import MarketplaceAbi from "../../contractsData/Marketplace.json";
+import MusicNFTADdress from "../../contractsData/nftMusic-address.json";
+import MusicNFTAbi from "../../contractsData/NFTMusic.json";
 import { create } from "ipfs-http-client";
-// const client = create('https://ipfs.infura.io:5001/api/v0')
+const client = create('https://ipfs.infura.io:5001/api/v0');
 
 const Createpage = () => {
-  const [ files, setFiles ] = useState();
-
-  const onChange = (e) => {
-    var files = e.target.files;
-    console.log(files);
-    var filesArr = Array.prototype.slice.call(files);
-    console.log(filesArr);
-    document.getElementById("file_name").style.display = "none";
-    setFiles({ files: [...files, ...filesArr] });
-  }
+  const [ files, setFile ] = useState();
+  const [ previewImageUrl, setPreviewImageUrl ] = useState("");
+  const [ preplayAudioUrl, setPreplayAudioUrl ] = useState("");
 
   // const uploadToIPFS = async (file) => {
   //   if (typeof file !== 'undefined') {
@@ -31,11 +26,56 @@ const Createpage = () => {
   //   }
   // }
 
+  const onChange = (event) => {
+    const file = event.target.files[0];
+    const previewImageUrl = URL.createObjectURL(file);
+    setPreviewImageUrl(previewImageUrl);
+    setFile(file);
+  }
+
+  const onChangeAudioFile = async (event) => {
+    try {
+      const file = event.target.files[0];
+      const result = await client.add(file);
+      mintThenList(result)
+    } catch (error) {
+      debugger
+    }
+  }
+
+  const mintThenList = async (result) => {
+    try {
+      const uri = `https://ipfs.infura.io/ipfs/${result.path}`
+      // mint nft 
+  
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      const signer = provider.getSigner();
+  
+      const nftContract = new ethers.Contract(MusicNFTADdress.address, MusicNFTAbi.abi, signer);
+      let marketplaceContract = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer);
+      await(await nftContract.mint(uri)).wait();
+      debugger
+  
+  
+      // get tokenId of new nft 
+      const id = await nftContract.tokenCount()
+      // approve marketplace to spend nft
+      await(await nftContract.setApprovalForAll(marketplaceContract.address, true)).wait()
+      // add nft to marketplace
+      const listingPrice = ethers.utils.parseEther("0")
+      await(await marketplaceContract.makeItem(nftContract.address, id, listingPrice)).wait();
+  
+      debugger
+    } catch (error) {
+      debugger
+    }
+  }
+
   const createItem = () => {
     let provider = ethers.getDefaultProvider();
     const signer = provider.getSigner()
     let marketplaceContract = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer);
-
+    marketplaceContract.mint();
   }
 
     return (
@@ -58,19 +98,49 @@ const Createpage = () => {
           <div className="col-lg-7 offset-lg-1 mb-5">
               <form id="form-create-item" className="form-border" action="#">
                   <div className="field-set">
-                      <h5>Upload file</h5>
-
+                      <h5>Upload Audio</h5>
                       <div className="d-create-file">
-                          <p id="file_name">PNG, JPG, GIF, WEBP or MP4. Max 200mb.</p>
-                          {files.map(x => 
+                        
+                        {/* {files.map(x => 
                           <p key="{index}">PNG, JPG, GIF, WEBP or MP4. Max 200mb.{x.name}</p>
-                          )}
-                          <div className='browse'>
-                            <input type="button" id="get_file" className="btn-main" value="Browse"/>
-                            <input id='upload_file' type="file" multiple onChange={this.onChange} />
-                          </div>
-                          
+                        )} */}
+                        {
+                          preplayAudioUrl && (
+                            <audio
+                              controls
+                            >
+                              <source
+                                  src={preplayAudioUrl}
+                                  type="audio/mpeg"
+                              />
+                            </audio>
+                          )
+                        }
+                        <div className='browse'>
+                          <input type="button" id="get_file" className="btn-main" value="Browse"/>
+                          <input id='upload_file' type="file" onChange={onChangeAudioFile} />
+                        </div>
                       </div>
+
+
+                      <h5>Upload background</h5>
+                      {
+                        previewImageUrl
+                          ? <div className="wrapper-image-upload"><img src={previewImageUrl || ""} alt="" /></div>
+                          : (
+                            <div className="d-create-file">
+                              <p id="file_name">PNG, JPG, GIF. Max 5Mb.</p>
+                              {/* {files.map(x => 
+                                <p key="{index}">PNG, JPG, GIF, WEBP or MP4. Max 200mb.{x.name}</p>
+                              )} */}
+                              <div className='browse'>
+                                <input type="button" id="get_file" className="btn-main" value="Browse"/>
+                                <input id='upload_file' type="file" onChange={onChange} />
+                              </div>
+                            </div>
+                          )
+                      }
+                      
 
                       <div className="spacer-single"></div>
 

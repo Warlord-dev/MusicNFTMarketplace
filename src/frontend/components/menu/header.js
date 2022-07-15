@@ -4,7 +4,7 @@ import { Link } from '@reach/router';
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useSelector, useDispatch } from 'react-redux';
 import { setWalletAccount } from "../../store/reducer/walletAccountSlice";
-
+import metamaskIcon from "../../assets/icons/metamask.svg";
 
 setDefaultBreakpoints([
   { xs: 0 },
@@ -43,7 +43,7 @@ const Header = function () {
 
     const connectToMetamask = async () => {
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-      dispatch(setWalletAccount({ address: accounts[0]} ));
+      dispatch(setWalletAccount({ address: accounts[0]} )); 
     }
 
     const handleBtnClick = (): void => {
@@ -84,6 +84,14 @@ const Header = function () {
     });
 
     const [showmenu, btn_icon] = useState(false);
+
+    const toShortAddress = (address) => {
+      if (!address) {
+        return null;
+      }
+
+      return `${address.slice(0, 6)}...${address.slice(address.length - 5, address.length - 1)}`;
+    }
 
     useEffect(() => {
       const header = document.getElementById("myHeader");
@@ -340,7 +348,19 @@ const Header = function () {
               </BreakpointProvider>
 
               <div className='mainside'>
-                <NavLink to="/wallet" className="btn-main">Connect Wallet</NavLink>
+                {
+                  walletAccount?.address
+                    ? (
+                      <div className="wrapper-metamask-icon">
+                        <img src={metamaskIcon} />
+                        {toShortAddress(walletAccount?.address)}
+                      </div>
+                    )
+                    : (
+                      <NavLink to="/wallet" className="btn-main">Connect Wallet</NavLink>
+                    )
+                }
+                
               </div>
                   
       </div>

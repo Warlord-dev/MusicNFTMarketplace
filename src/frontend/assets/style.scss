@@ -2115,6 +2115,9 @@ address {
     border-radius: 10px;
     border: dashed 3px #dddddd;
     text-align: center;
+    #filename {
+      padding: 50px;
+    }
     #get_file{
       margin: 0 auto;
     }
@@ -2139,6 +2142,15 @@ address {
         }
       }
     }
+}
+
+.wrapper-image-upload {
+  width: 200px;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /*** activity ***/
@@ -4095,3 +4107,16 @@ img.img-rounded{
   cursor: pointer;
 }
 
+.wrapper-metamask-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  color: red;
+}
