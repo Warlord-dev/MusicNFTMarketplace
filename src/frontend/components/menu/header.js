@@ -127,20 +127,21 @@ const Header = function () {
           <div className='logo px-0'>
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
-                <img
-                    src="/img/logo-3.png"
+                  {/* <img
+                    src="/img/logo.jpg"
                     className="img-fluid d-block"
                     alt="#"
-                  />
-                  <img
-                    src="/img/logo-3.png"
+                  /> */}
+                  {/* <img
+                    src="/img/logo.jpg"
                     className="img-fluid d-3"
                     alt="#"
-                  />
+                  /> */}
                   <img
-                    src="/img/logo-light.png"
+                    src="/img/logo.jpg"
                     className="img-fluid d-none"
                     alt="#"
+                    style={{ width: '46px', borderRadius: '80%' }}
                   />
                 </NavLink>
               </div>
@@ -264,25 +265,6 @@ const Header = function () {
                     </div>
                     <div className='navbar-item'>
                       <div ref={ref1}>
-                          {/* <div className="dropdown-custom btn" 
-                             onMouseEnter={goToMarketplace} onMouseLeave={closeMenu1}>
-                            Marketplace
-                            <span className='lines'></span>
-                            {openMenu1 && (
-                            <div className='item-dropdown'>
-                              <div className="dropdown" onClick={closeMenu1}>
-                              <NavLink to="/explore">Explore</NavLink>
-                              <NavLink to="/explore2">Explore 2</NavLink>
-                              <NavLink to="/rangking">Rangking</NavLink>
-                              <NavLink to="/colection">Collection</NavLink>
-                              <NavLink to="/ItemDetail">Items Details</NavLink>
-                              <NavLink to="/Auction">Live Auction</NavLink>
-                              <NavLink to="/helpcenter">Help Center</NavLink>
-                              </div>
-                            </div>
-                          )}
-                          </div> */}
-
                           <NavLink to="/marketplace">
                             Marketplace
                             <span className='lines'></span>
@@ -291,35 +273,26 @@ const Header = function () {
                     </div>
                     <div className='navbar-item'>
                       <div ref={ref2}>
-                          <div className="dropdown-custom dropdown-toggle btn" 
-                             onMouseEnter={handleBtnClick2} onMouseLeave={closeMenu2}>
-                            Pages
+                        <NavLink to="/create">
+                            Min NFT
                             <span className='lines'></span>
-                            {openMenu2 && (
-                            <div className='item-dropdown'>
-                              <div className="dropdown" onClick={closeMenu2}>
-                              <NavLink to="/Author">Author</NavLink>
-                              <NavLink to="/wallet">Wallet</NavLink>
-                              <NavLink to="/create">Create</NavLink>
-                              <NavLink to="/news">News</NavLink>
-                              <NavLink to="/works">Gallery</NavLink>
-                              <NavLink to="/login">login</NavLink>
-                              <NavLink to="/loginTwo">login 2</NavLink>
-                              <NavLink to="/register">Register</NavLink>
-                              <NavLink to="/contact">Contact Us</NavLink>
-                              </div>
-                            </div>
-                          )}
-                          </div>
+                          </NavLink>
                         </div>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/activity">
-                      Activity
-                      <span className='lines'></span>
+                      <NavLink to="/#">
+                        MusicVerse
+                        <span className='lines'></span>
                       </NavLink>
                     </div>
+
                     <div className='navbar-item'>
+                      <NavLink to="/activity">
+                        Staking
+                        <span className='lines'></span>
+                      </NavLink>
+                    </div>
+                    {/* <div className='navbar-item'>
                       <div ref={ref3}>
                           <div className="dropdown-custom dropdown-toggle btn" 
                              onMouseEnter={handleBtnClick3} onMouseLeave={closeMenu3}>
@@ -341,7 +314,7 @@ const Header = function () {
                           )}
                           </div>
                         </div>
-                    </div>
+                    </div> */}
                   </div>
                 </Breakpoint>
               </BreakpointProvider>
