@@ -73,7 +73,7 @@ const app= () => (
           <Home1 path="/home1" />
           <Home path="/home2" />
           <Explore path="/explore" />
-          <Explore2 path="/explore2" />
+          <Explore2 path="/marketplace" />
           <Helpcenter path="/helpcenter" />
           <Rangking path="/rangking" />
           <Colection path="/colection" />

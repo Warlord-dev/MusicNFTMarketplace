@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Collections, DummyAuthors } from '../../data/Collections';
+import { Collections, DummyAuthors, topAuthorIds } from '../../data/Collections';
 
 function Authorlist() {
     const [ topAuthors, setTopAuthors ] = useState([]);
     
 
     useEffect(() => {
-        let authors = DummyAuthors
-            .sort((prevAuthor, nextAuthor)=> prevAuthor.followers - nextAuthor.followers)
-            .filter((item, index) => index <= 7);
-        const topAuthorIds = authors.map(item => item.id);
-        const mapAuthor = new Map();
-        for (let i = 0; i < Collections.length; i += 1) {
-            if (topAuthorIds.includes(Collections[i].authorId)) {
-                if (mapAuthor.get(Collections[i].authorId)) {
-                    mapAuthor.set(Collections[i].authorId, mapAuthor.get(Collections[i].authorId) + 1);
-                } else {
-                    mapAuthor.set(Collections[i].authorId, 1);
-                }
-            }
-        };
-        authors = authors.map(item => ({ ...item, count: mapAuthor.get(item.id) }));
-        setTopAuthors(authors);
+        const topAuthors = DummyAuthors.filter((author) => topAuthorIds.includes(author.id));
+        setTopAuthors(topAuthors);
     }, []);
 
     return (
@@ -31,7 +17,7 @@ function Authorlist() {
                     topAuthors.map(author => (
                         <li>                                        
                             <div className="author_list_pp">
-                                <span onClick={()=> window.open("", "_self")}>
+                                <span onClick={()=> window.open(`/Author/${author?.id}`, "_self")}>
                                     <img className="lazy" src={author.avatar} alt=""/>
                                     <i className="fa fa-check"></i>
                                 </span>

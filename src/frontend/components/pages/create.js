@@ -54,8 +54,6 @@ const Createpage = () => {
       const nftContract = new ethers.Contract(MusicNFTADdress.address, MusicNFTAbi.abi, signer);
       let marketplaceContract = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer);
       await(await nftContract.mint(uri)).wait();
-      debugger
-  
   
       // get tokenId of new nft 
       const id = await nftContract.tokenCount()

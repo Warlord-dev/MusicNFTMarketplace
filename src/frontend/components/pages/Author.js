@@ -78,7 +78,7 @@ const Colection = function() {
 
 
   const playAudio = (audioId) => {
-    const audio = document.getElementById(`audio-${audioId}`);
+    const audio = document.getElementById(`new-items-${audioId}`);
 
     if (audioPlayingId) {
         if (audioId === audioPlayingId) {
@@ -86,7 +86,7 @@ const Colection = function() {
             // this.setState({ ...this.state, audioPlayingId: "" });
             setAudioPlayingId(audioId);
         } else {
-            const currentAudio = document.getElementById(`audio-${audioPlayingId}`);
+            const currentAudio = document.getElementById(`new-items-${audioPlayingId}`);
             currentAudio.pause();
             audio.play();
             setAudioPlayingId(audioId);
@@ -134,6 +134,7 @@ const nftCardItem = (nft, index) => (
                 <Outer>
                     <div className="g-relative">
                         {nft?.videoSrc ? null : <img src={nft?.background} className="lazy nft__item_preview" alt="" />}
+                        {/* <img src="https://i.pinimg.com/originals/7c/21/e4/7c21e46ed64e6cf077cea986f6709151.gif" /> */}
                         <span
                             className="icon-play"
                             style={{ zIndex: 9  }}
@@ -143,7 +144,7 @@ const nftCardItem = (nft, index) => (
                         </span>
                         {
                         nft?.videoSrc
-                            ? (<video id={`new-items-${nft?.id}`}  controlslist="nodownload" style={{ height: '260px' }}>
+                            ? (<video id={`new-items-${nft?.id}`}  controlslist="nodownload" style={{ maxHeight: '200px' }}>
                                 <source
                                     src={nft?.videoSrc || ""}
                                     type="video/mp4"
@@ -186,11 +187,8 @@ return (
 
   <section className='container no-bottom'>
     <div className='row'>
-      <div className='spacer-double'>
-
-      </div>
       <div className="col-md-12">
-         <div className="d_profile de-flex">
+         <div className="d_profile de-flex author__background" style={{ backgroundImage: `url('${author?.background}')` }} >
               <div className="de-flex-col">
                   <div className="profile_avatar">
                       <img src={author?.avatar} alt=""/>
@@ -207,7 +205,7 @@ return (
               </div>
               <div className="profile_follow de-flex">
                   <div className="de-flex-col">
-                      <div className="profile_follower">{author?.numberFollowers} followers</div>
+                      <div className="profile_follower">{author?.followers} followers</div>
                   </div>
                   <div className="de-flex-col">
                       <span className="btn-main">Follow</span>

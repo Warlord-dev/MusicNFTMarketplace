@@ -4093,7 +4093,7 @@ img.img-rounded{
 
 .icon-play {
   position: absolute;
-  bottom: 0px;
+  top: 77%;
   right: 0px;
   width: 30px;
   height: 30px;
@@ -4119,4 +4119,10 @@ img.img-rounded{
   }
 
   color: red;
+}
+
+.author__background {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 }

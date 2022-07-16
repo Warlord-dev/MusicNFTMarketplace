@@ -88,7 +88,7 @@ export default class Responsive extends Component {
                           <span><img src={author.background} className="lazy img-fluid" alt=""/></span>
                       </div>
                       <div className="nft_coll_pp">
-                          <span onClick={()=> window.open("/home", "_self")}><img className="lazy" src={author?.avatar} alt=""/></span>
+                          <span onClick={()=> window.open(`/Author/${author?.id}`, "_self")}><img className="lazy" src={author?.avatar} alt=""/></span>
                           <i className="fa fa-check"></i>
                       </div>
                       <div className="nft_coll_info">

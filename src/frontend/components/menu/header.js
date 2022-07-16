@@ -116,6 +116,10 @@ const Header = function () {
         };
     }, []);
 
+    const goToMarketplace = () => {
+
+    }
+
     return (
     <header id="myHeader" className='navbar white'>
      <div className='container'>
@@ -250,28 +254,19 @@ const Header = function () {
                   <div className='menu'>
                     <div className='navbar-item'>
                         <div ref={ref}>
-                          <div className="dropdown-custom dropdown-toggle btn" 
+                          <div className="dropdown-custom btn" 
                              onMouseEnter={handleBtnClick} onMouseLeave={closeMenu}>
                             Home
                             <span className='lines'></span>
-                            {openMenu && (
-                            <div className='item-dropdown'>
-                              <div className="dropdown" onClick={closeMenu}>
-                                <NavLink to="/">Homepage</NavLink>
-                                <NavLink to="/home1">Homepage 1</NavLink>
-                                <NavLink to="/home2">Homepage 2</NavLink>
-                              </div>
-                            </div>
-                          )}
                           </div>
                           
                         </div>
                     </div>
                     <div className='navbar-item'>
                       <div ref={ref1}>
-                          <div className="dropdown-custom dropdown-toggle btn" 
-                             onMouseEnter={handleBtnClick1} onMouseLeave={closeMenu1}>
-                            Explore
+                          {/* <div className="dropdown-custom btn" 
+                             onMouseEnter={goToMarketplace} onMouseLeave={closeMenu1}>
+                            Marketplace
                             <span className='lines'></span>
                             {openMenu1 && (
                             <div className='item-dropdown'>
@@ -286,8 +281,12 @@ const Header = function () {
                               </div>
                             </div>
                           )}
-                          </div>
-                          
+                          </div> */}
+
+                          <NavLink to="/marketplace">
+                            Marketplace
+                            <span className='lines'></span>
+                          </NavLink>
                         </div>
                     </div>
                     <div className='navbar-item'>

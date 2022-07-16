@@ -12,7 +12,7 @@ const Outer = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 260px;
+  height: 219px;
   overflow: hidden;
   border-radius: 8px;
 `;
@@ -343,9 +343,9 @@ export default class Responsive extends Component {
                     <CustomSlide className='itm' index={3}>
                         <div className="d-item">
                             <div className="nft__item">
-                                <div className="de_countdown">
-                                <Clock deadline={this.state.deadline1} />
-                                </div>
+                                {/* <div className="de_countdown"> */}
+                                {/* <Clock deadline={this.state.deadline1} /> */}
+                                {/* </div> */}
                                 <div className="author_list_pp">
                                     <span onClick={() => this.goToAuthorCollections(item.authorId)}>                                    
                                         <img className="lazy" src={item?.author?.avatar} alt=""/>
@@ -365,7 +365,7 @@ export default class Responsive extends Component {
                                       </span>
                                       {
                                         item?.videoSrc
-                                          ? (<video id={`new-items-${item?.id}`}  controlslist="nodownload" style={{ height: '260px' }}>
+                                          ? (<video id={`new-items-${item?.id}`}  controlslist="nodownload" style={{ height: '200px', width: '200px' }}>
                                               <source
                                                   src={item?.videoSrc || ""}
                                                   type="video/mp4"
@@ -389,13 +389,13 @@ export default class Responsive extends Component {
                                         <h4>{item?.name}</h4>
                                     </span>
                                     <div className="nft__item_price">
-                                        {item?.price}<span>{item?.bid}</span>
+                                        {item?.price} {' '} {item?.unitPrice}<span>{item?.bid}</span>
                                     </div>
                                     <div className="nft__item_action">
-                                        <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
+                                        <span onClick={()=> window.open("/#", "_self")}>Purchase on Opensea</span>
                                     </div>
                                     <div className="nft__item_like">
-                                        <i className="fa fa-heart"></i><span>97</span>
+                                        <i className="fa fa-heart"></i><span>{item?.likes}</span>
                                     </div>                                 
                                 </div> 
                             </div>
