@@ -808,22 +808,22 @@ export const Collections = [
         createdAt: "2022-06-15 17:00:00",
         videoSrc: null
     },
-    {
-        id: 33,
-        type: TYPES.SIGNLE,
-        status: STATUSES.BUY_NOW,
-        src: "/audio/cryptoRaiders/WeAreRaiders.wav",
-        name: "Love overflow #7",
-        price: '2',
-        unitPrice: CURRENCIES.ETH,
-        background: "/img/collections/xavier/background.jpg",
-        authorId: 5,
-        authorName: "The punk Rocker",
-        features: [],
-        likes: 134,
-        createdAt: "2022-06-20 17:00:00",
-        videoSrc: null
-    },
+    // {
+    //     id: 33,
+    //     type: TYPES.SIGNLE,
+    //     status: STATUSES.BUY_NOW,
+    //     src: "/audio/cryptoRaiders/WeAreRaiders.wav",
+    //     name: "Love overflow #7",
+    //     price: '2',
+    //     unitPrice: CURRENCIES.ETH,
+    //     background: "/img/collections/xavier/background.jpg",
+    //     authorId: 5,
+    //     authorName: "The punk Rocker",
+    //     features: [],
+    //     likes: 134,
+    //     createdAt: "2022-06-20 17:00:00",
+    //     videoSrc: null
+    // },
     {
         id: 34,
         type: TYPES.SIGNLE,
