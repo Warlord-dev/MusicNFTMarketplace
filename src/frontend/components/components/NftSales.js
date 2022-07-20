@@ -17,8 +17,6 @@ const fadeInUp = keyframes`
 `;
 
 const NftSales = () => {
-  const walletAccount = useSelector((state) => state.walletAccount);
-
  return (
       <div className='row mb-4'>
             <div className="col-3 mb-3 mnft-sale">
@@ -37,7 +35,11 @@ const NftSales = () => {
 
           <div className="col-3 mb-3 mnft-sale">
             <div className="wrapper-author-image" >
-                  <div className='author-image' style={{ backgroundImage: 'url("/img/author/CarlaThePoet.jpg")'}} />
+                  <div
+                    className='author-image'
+                    style={{ backgroundImage: 'url("/img/author/CarlaThePoet.jpg")'}}
+                    onClick={() => window.open("/Author/14", "_self")}
+                  />
                 </div>
                 <div className='mnft-sale__collections'>
                   <div className='mnft-sale__author-name'>Carla the poet</div>
@@ -47,7 +49,11 @@ const NftSales = () => {
 
           <div className="col-3 mb-3 mnft-sale">
                 <div className="wrapper-author-image" >
-                  <div className='author-image' style={{ backgroundImage: 'url("/img/author/soStuffSoCute.jpg")'}} />
+                  <div
+                    className='author-image'
+                    style={{ backgroundImage: 'url("/img/author/soStuffSoCute.jpg")'}}
+                    onClick={() => window.open("/Author/15", "_self")}
+                  />
                 </div>
                 <div className='mnft-sale__collections'>
                   <div className='mnft-sale__author-name'>So Tuff So Cute</div>

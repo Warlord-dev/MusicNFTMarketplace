@@ -24,7 +24,7 @@ export const CURRENCIES = {
 
 export const Collections = [
     {
-        id: 26,
+        id: 261,
         type: TYPES.SIGNLE,
         status: STATUSES.BUY_NOW,
         src: "/audio/patJunior/BlackBeamin.m4a",
@@ -498,7 +498,7 @@ export const Collections = [
         background: "/img/collections/apeDrops/TheGreat.png",
         authorId: 1,
         authorName: "Ape drops",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 45,
         createdAt: "2022-06-07 17:00:00",
         videoSrc: "/videos/apeDropsEth/TheGreat.mp4"
@@ -530,7 +530,7 @@ export const Collections = [
         background: "/img/collections/cryptoPunk/FestFeel.jpg",
         authorId: 2,
         authorName: "EDM punk",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 45,
         createdAt: "2022-06-08 17:00:00",
         videoSrc: null
@@ -642,7 +642,7 @@ export const Collections = [
         background: "/img/collections/rockPunk/CherryMEntal.gif",
         authorId: 3,
         authorName: "The punk Rocker",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 95,
         createdAt: "2022-06-10 17:00:00",
         videoSrc: null
@@ -658,7 +658,7 @@ export const Collections = [
         background: "/img/collections/rockPunk/Ending2.gif",
         authorId: 3,
         authorName: "The punk Rocker",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 66,
         createdAt: "2022-06-10 17:00:00",
         videoSrc: null
@@ -1315,7 +1315,7 @@ export const Collections = [
         background: "/img/collections/dreamer/006.gif",
         authorId: 9,
         authorName: "The punk Rocker",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 65,
         createdAt: "2022-06-18 17:00:00",
         videoSrc: null
@@ -1331,7 +1331,7 @@ export const Collections = [
         background: "/img/collections/dreamer/006.gif",
         authorId: 10,
         authorName: "The punk Rocker",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 65,
         createdAt: "2022-06-18 17:00:00",
         videoSrc: "/videos/ravePigs/RavePigs001.mp4"
@@ -1443,7 +1443,7 @@ export const Collections = [
         background: "/img/collections/zah23/kolors.png",
         authorId: 11,
         authorName: "The punk Rocker",
-        features: [FEATURES.NEW],
+        features: [],
         likes: 37,
         createdAt: "2022-06-20 17:00:00",
         videoSrc: null
@@ -1523,7 +1523,7 @@ export const Collections = [
         background: "/img/collections/carlaThePoet/Karma.jfif",
         authorId: 14,
         authorName: "The punk Rocker",
-        features: [],
+        features: [FEATURES.NEW],
         likes: 37,
         createdAt: "2022-06-20 17:00:00",
         videoSrc: null
@@ -1575,7 +1575,103 @@ export const Collections = [
         likes: 37,
         createdAt: "2022-06-20 17:00:00",
         videoSrc: null
-    }
+    },
+    {
+        id: 151,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [FEATURES.NEW],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
+    {
+        id: 152,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
+    {
+        id: 153,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
+    {
+        id: 154,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
+    {
+        id: 155,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
+    {
+        id: 156,
+        type: TYPES.SIGNLE,
+        status: STATUSES.BUY_NOW,
+        src: "/audio/soTuffSoCute/BreakStuff.m4a",
+        name: "Break Stuff #6",
+        price: '2.99',
+        unitPrice: CURRENCIES.BNB,
+        background: "/img/collections/soTuffSoCute/BreakStuff.jfif",
+        authorId: 15,
+        authorName: "The punk Rocker",
+        features: [],
+        likes: 37,
+        createdAt: "2022-06-20 17:00:00",
+        videoSrc: null
+    },
 ];
 
 export const DummyAuthors = [
@@ -1696,17 +1792,46 @@ export const DummyAuthors = [
         twitter: "",
         avatar: "https://lh3.googleusercontent.com/RCAz0-Qf8gS8otL-KMZxydgRr6Nm3FD4MqOd7rlnuZFE0xBhTGhH26hSK5O3kJQ4RGYp0WkUCC5zZpNiZH0B9vt79mE-KIBOQzaW=s168",
         followers: 256,
+        twitter: {
+            link: "https://twitter.com/boredbr0thers_",
+            name: "@boredbrothers"
+        },
+        sportify: {
+            // link: "https://twitter.com/boredbrothers_",
+            // name: "Bored Brother"
+        },
         background: "https://pbs.twimg.com/profile_banners/1488234966047764480/1654883503/1500x500"
     },
     {
         id: 14,
         name: "Carla the poet",
-        twitter: "",
+        twitter: {
+            link: "https://twitter.com/carIathepoet",
+            name: "@CarlaThePoet"
+        },
+        sportify: {
+            link: "https://open.spotify.com/artist/22cqc02gHQkxOfffYswvIt",
+            name: "Carla the Poet"
+        },
         avatar: "/img/author/CarlaThePoet.jpg",
         followers: 256,
         background: "/img/collections/carlaThePoet/background.jfif"
+    },
+    {
+        id: 15,
+        name: "SoTuffSoCute",
+        twitter: {
+            link: "https://twitter.com/SoTuffS0Cute",
+            name: "@SoTuffSoCute"
+        },
+        sportify: {
+            link: "https://open.spotify.com/artist/1PaF0WJCG5MLAoOv5xSWeR",
+            name: "SoTuffSoCute"
+        },
+        avatar: "/img/author/SoTuffSoCute.jfif",
+        followers: 256,
+        background: "/img/collections/soTuffSoCute/background.webp"
     }
-]
-
+];
 
 export const topAuthorIds = [12, 13, 14, 9, 5, 1, 2]

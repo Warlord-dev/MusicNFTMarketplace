@@ -2777,6 +2777,16 @@ i.font60 {
     color: $white;
     font-weight: 700;
 }
+
+.nft__item-network {
+  font-size: 12px;
+  padding: 0px 6px;
+  background-color: #454548;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .nft__item_action {
     font-size: 14px;
     span{
@@ -3259,7 +3269,7 @@ i.font60 {
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     width: 150px;
-    height: auto;
+    height: 150px;
 }
 .d_coll .profile_avatar img{
     display: inline-block;
@@ -4149,9 +4159,11 @@ img.img-rounded{
   cursor: pointer;
   width: max-content;
   background: gray;
-  padding: 5px 10px;
+  padding: 2px 4px;
   color: white;
   border-radius: 20px;
+  margin-right: 14px;
+  font-size: 13px;
 
   &__social-icon {
     width: 18px;
@@ -4212,4 +4224,8 @@ img.img-rounded{
     box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 30%);
     border-radius: 0 0 15px 15px;
   }
+}
+
+.nowrap {
+  white-space: nowrap;
 }
