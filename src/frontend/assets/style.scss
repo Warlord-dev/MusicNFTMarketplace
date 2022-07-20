@@ -2760,7 +2760,7 @@ i.font60 {
 .nft__item_info{
   cursor: pointer;
   line-height: 28px;
-  margin-bottom: -22px;
+  // margin-bottom: -22px;
 }
 .nft__item h4 {
     font-weight: 800;
@@ -2781,7 +2781,6 @@ i.font60 {
     font-size: 14px;
     span{
       font-weight: bold;
-      color: $color;
     }
 }
 .nft__item_like {
@@ -3230,7 +3229,7 @@ i.font60 {
   position: relative;
 }
 .d_profile {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 .profile_avatar {
     display: flex;
@@ -4125,4 +4124,92 @@ img.img-rounded{
   height: 250px;
   background-size: cover;
   background-position: center;
+}
+
+.to-opensea {
+  padding: 5px 8px;
+  background-color: rgb(32, 129, 226);
+  border: 2px solid rgb(32, 129, 226);
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.m-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+  background: gray;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 20px;
+
+  &__social-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+
+  &__text {
+    margin-right: 5px;
+  }
+}
+
+.mnft-sale {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+
+  .wrapper-author-image {
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 30%);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+
+    .author-image {
+      height: 300px;
+      width: 100%;
+      background-size: cover;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__collections {
+    position: absolute;
+    width: calc(100% - 1.5rem);
+  }
+
+  &__author-name {
+    width: 100%;
+    color: #ff8000;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+    background: white;
+    padding: 8px;
+  }
+
+  &__release-date {
+    border-top: 1px solid #ed632e;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.025);;
+    display: flex;
+    color: white;
+    padding: 8px;
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 30%);
+    border-radius: 0 0 15px 15px;
+  }
 }

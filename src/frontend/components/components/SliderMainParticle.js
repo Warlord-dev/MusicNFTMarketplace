@@ -43,7 +43,7 @@ const slidermainparticle= () => (
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-              <span onClick={()=> window.open("#", "_self")} className="btn-main inline lead">Explore</span>
+              <span onClick={()=> window.open("/marketplace", "_self")} className="btn-main inline lead">Explore</span>
               <div className="mb-sm-30"></div>
               </Reveal>
 

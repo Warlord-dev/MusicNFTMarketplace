@@ -31,7 +31,7 @@ export const Collections = [
         name: "Love overflow",
         price: '2.6',
         unitPrice: CURRENCIES.ETH,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [FEATURES.NEW],
@@ -260,54 +260,6 @@ export const Collections = [
         authorName: "Drip #13",
         features: [FEATURES.NEW],
         likes: 66,
-        createdAt: "2022-07-16 17:00:00",
-        videoSrc: null
-    },
-    {
-        id: 86,
-        type: TYPES.SIGNLE,
-        status: STATUSES.BUY_NOW,
-        src: "https://openseauserdata.com/files/2b16150dcdba5f6ee92f1b411586b91b.wav",
-        name: "Stick and move #1",
-        price: '1.5',
-        unitPrice: CURRENCIES.ETH,
-        background: "https://lh3.googleusercontent.com/Uc4jeIk6_XzFqz5WoHtMdD6JC1DuTmVJ0cN-YgmLv_pfG1A5bHedG7wfgWCrdbWxueaIkt_FxmIAbKSj64SNT8dwvbC8Nhl13om58w=w315",
-        authorId: 14,
-        authorName: "Drip #13",
-        features: [FEATURES.NEW],
-        likes: 231,
-        createdAt: "2022-07-16 17:00:00",
-        videoSrc: null
-    },
-    {
-        id: 87,
-        type: TYPES.SIGNLE,
-        status: STATUSES.BUY_NOW,
-        src: "https://openseauserdata.com/files/2b16150dcdba5f6ee92f1b411586b91b.wav",
-        name: "Stick and move #2",
-        price: '1.5',
-        unitPrice: CURRENCIES.ETH,
-        background: "https://lh3.googleusercontent.com/Uc4jeIk6_XzFqz5WoHtMdD6JC1DuTmVJ0cN-YgmLv_pfG1A5bHedG7wfgWCrdbWxueaIkt_FxmIAbKSj64SNT8dwvbC8Nhl13om58w=w315",
-        authorId: 14,
-        authorName: "Drip #13",
-        features: [],
-        likes: 166,
-        createdAt: "2022-07-16 17:00:00",
-        videoSrc: null
-    },
-    {
-        id: 88,
-        type: TYPES.SIGNLE,
-        status: STATUSES.BUY_NOW,
-        src: "https://openseauserdata.com/files/2b16150dcdba5f6ee92f1b411586b91b.wav",
-        name: "Stick and move #3",
-        price: '1.5',
-        unitPrice: CURRENCIES.ETH,
-        background: "https://lh3.googleusercontent.com/Uc4jeIk6_XzFqz5WoHtMdD6JC1DuTmVJ0cN-YgmLv_pfG1A5bHedG7wfgWCrdbWxueaIkt_FxmIAbKSj64SNT8dwvbC8Nhl13om58w=w315",
-        authorId: 14,
-        authorName: "Drip #13",
-        features: [],
-        likes: 166,
         createdAt: "2022-07-16 17:00:00",
         videoSrc: null
     },
@@ -703,7 +655,7 @@ export const Collections = [
         name: "Love overflow",
         price: '2.6',
         unitPrice: CURRENCIES.ETH,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [],
@@ -719,7 +671,7 @@ export const Collections = [
     //     name: "Love overflow #1",
     //     price: '0.6',
     //     unitPrice: CURRENCIES.BNB,
-    //     background: "/img/collections/xavier/background.jpg",
+    //     background: "/img/collections/patJunior/background.jpg",
     //     authorId: 5,
     //     authorName: "The punk Rocker",
     //     features: [],
@@ -735,7 +687,7 @@ export const Collections = [
         name: "Love overflow #2",
         price: '0.6',
         unitPrice: CURRENCIES.BNB,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [],
@@ -752,7 +704,7 @@ export const Collections = [
         name: "Love overflow #3",
         price: '1',
         unitPrice: CURRENCIES.BNB,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [],
@@ -768,7 +720,7 @@ export const Collections = [
     //     name: "Love overflow #4",
     //     price: '1',
     //     unitPrice: CURRENCIES.BNB,
-    //     background: "/img/collections/xavier/background.jpg",
+    //     background: "/img/collections/patJunior/background.jpg",
     //     authorId: 5,
     //     authorName: "The punk Rocker",
     //     features: [],
@@ -784,7 +736,7 @@ export const Collections = [
         name: "Love overflow #5",
         price: '1',
         unitPrice: CURRENCIES.BNB,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [],
@@ -800,7 +752,7 @@ export const Collections = [
         name: "Love overflow #6",
         price: '0.8',
         unitPrice: CURRENCIES.BNB,
-        background: "/img/collections/xavier/background.jpg",
+        background: "/img/collections/patJunior/background.jpg",
         authorId: 5,
         authorName: "The punk Rocker",
         features: [],
@@ -816,7 +768,7 @@ export const Collections = [
     //     name: "Love overflow #7",
     //     price: '2',
     //     unitPrice: CURRENCIES.ETH,
-    //     background: "/img/collections/xavier/background.jpg",
+    //     background: "/img/collections/patJunior/background.jpg",
     //     authorId: 5,
     //     authorName: "The punk Rocker",
     //     features: [],
@@ -1453,11 +1405,19 @@ export const DummyAuthors = [
     },
     {
         id: 5,
-        name: "Xavier",
+        name: "Pat junior",
         twitter: "",
-        avatar: "/img/author/xavier.webp",
-        followers: 47,
-        background: "https://pbs.twimg.com/profile_banners/420013363/1655734370/1500x500"
+        avatar: "/img/author/patJunior.webp",
+        followers: 247,
+        background: "https://pbs.twimg.com/profile_banners/420013363/1655734370/1500x500",
+        twitter: {
+            link: "https://twitter.com/iampatjuni0r",
+            name: "@iampatjuni0r"
+        },
+        sportify: {
+            link: "https://open.spotify.com/artist/0lOsH3CaZpQIE3QO40SFvx?si=Wf3_KnyHSMSFXLnKVJP7CQ&nd=1",
+            name: "pat junior"
+        }
     },
     {
         id: 6,
@@ -1510,7 +1470,14 @@ export const DummyAuthors = [
     {
         id: 12,
         name: "Bored brother",
-        twitter: "",
+        twitter: {
+            link: "https://twitter.com/boredbr0thers_",
+            name: "@boredbrothers"
+        },
+        sportify: {
+            // link: "https://twitter.com/boredbrothers_",
+            // name: "Bored Brother"
+        },
         avatar: "https://pbs.twimg.com/profile_images/1499549454357118976/ts3qtwqn_400x400.jpg",
         followers: 256,
         background: "https://pbs.twimg.com/profile_banners/1488234966047764480/1654883503/1500x500"
@@ -1522,15 +1489,7 @@ export const DummyAuthors = [
         avatar: "https://lh3.googleusercontent.com/RCAz0-Qf8gS8otL-KMZxydgRr6Nm3FD4MqOd7rlnuZFE0xBhTGhH26hSK5O3kJQ4RGYp0WkUCC5zZpNiZH0B9vt79mE-KIBOQzaW=s168",
         followers: 256,
         background: "https://pbs.twimg.com/profile_banners/1488234966047764480/1654883503/1500x500"
-    },
-    {
-        id: 14,
-        name: "Iman Europe",
-        twitter: "",
-        avatar: "https://lh3.googleusercontent.com/YMIXdmATxIxcpucGZexF1AIQzVEepz9i1sF9wCgMdzTlb5wxAxsxG9X72jzMFARI5ZzKTwyjEeJQvQTLy-fq34rsi9depqSn4Q9t3w=s168",
-        followers: 351,
-        background: "https://pbs.twimg.com/profile_banners/1488234966047764480/1654883503/1500x500"
-    },
+    }
 ]
 
 

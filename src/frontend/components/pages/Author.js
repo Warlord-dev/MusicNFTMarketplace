@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import { useParams } from "@reach/router";
-import Clock from "../components/Clock";
 import styled from "styled-components";
 import { Collections, DummyAuthors } from "../../data/Collections";
 import { useSelector } from "react-redux";
@@ -168,14 +167,17 @@ const nftCardItem = (nft, index) => (
                     <h4>{nft.name}</h4>
                 </span>
                 <div className="nft__item_price">
-                    {nft.price}<span>{nft.bid}</span>
+                    {nft.price} {' '} {nft.unitPrice}
                 </div>
                 <div className="nft__item_action">
-                    <span onClick={()=> window.open(nft.bidLink, "_self")}>Place a bid</span>
+                    <div className="to-opensea" onClick={()=> window.open(nft.bidLink, "_self")}>
+                      <img src="https://opensea.io/static/images/logos/opensea.svg" />
+                      <span>Purchase on Opensea</span>
+                    </div>
                 </div>
-                <div className="nft__item_like">
+                {/* <div className="nft__item_like">
                     <i className="fa fa-heart"></i><span>{nft.likes}</span>
-                </div>                            
+                </div>                             */}
             </div> 
         </div>
     </div> 
@@ -189,30 +191,50 @@ return (
     <div className='row'>
       <div className="col-md-12">
          <div className="d_profile de-flex author__background" style={{ backgroundImage: `url('${author?.background}')` }} >
-              <div className="de-flex-col">
-                  <div className="profile_avatar">
-                      <img src={author?.avatar} alt=""/>
-                      <i className="fa fa-check"></i>
-                      <div className="profile_name">
-                          <h4>
-                              {author?.name}
-                              <span className="profile_username">{author?.twitter}</span>
-                              {/* <span id="wallet" className="profile_wallet">DdzFFzCqrhshMSxb9oW3mRo4MJrQkusV3fGFSTwaiu4wPBqMryA9DYVJCkW9n7twCffG5f5wX2sSkoDXGiZB1HPa7K7f865Kk4LqnrME</span> */}
-                              {/* <button id="btn_copy" title="Copy Text">Copy</button> */}
-                          </h4>
-                      </div>
-                  </div>
-              </div>
-              <div className="profile_follow de-flex">
+              {/* <div className="profile_follow de-flex">
                   <div className="de-flex-col">
                       <div className="profile_follower">{author?.followers} followers</div>
                   </div>
                   <div className="de-flex-col">
                       <span className="btn-main">Follow</span>
                   </div>
-              </div>
+              </div> */}
 
           </div>
+      </div>
+    </div>
+  </section>
+
+  <section className='container pt-0 pb-0' style={{ marginTop: '-50px'}}>
+    <div className="de-flex-col">
+      <div className="profile_avatar">
+          <img src={author?.avatar} alt=""/>
+          <i className="fa fa-check"></i>
+          <div className="profile_name">
+              <h4>
+                  {author?.name}
+                  <span className="profile_username" onClick={() => window.open(author?.twitter?.link, '_target')}>{author?.twitter?.name}</span>
+                  {/* <span id="wallet" className="profile_wallet">DdzFFzCqrhshMSxb9oW3mRo4MJrQkusV3fGFSTwaiu4wPBqMryA9DYVJCkW9n7twCffG5f5wX2sSkoDXGiZB1HPa7K7f865Kk4LqnrME</span> */}
+                  {/* <button id="btn_copy" title="Copy Text">Copy</button> */}
+              </h4>
+          </div>
+      </div>
+  </div>
+    <div className='row'>
+      <div className="m-badge" onClick={() => window.open(author?.twitter?.link, '_target')}>
+        <img src="/icons/twitter.svg" className="m-badge__social-icon" />
+        <span className="m-badge__text">
+            {author?.twitter?.name}
+        </span>
+        <i className="fa fa-check" style={{ color: 'rgb(29, 155, 240)' }}></i>
+      </div>
+      
+      <div className="m-badge" onClick={() => window.open(author?.sportify?.link, '_target')}>
+        <img src="/icons/sportify.png" className="m-badge__social-icon" />
+        <span className="m-badge__text">
+            {author?.sportify?.name}
+        </span>
+        <i className="fa fa-check" style={{ color: 'rgb(29, 155, 240)' }}></i>
       </div>
     </div>
   </section>
