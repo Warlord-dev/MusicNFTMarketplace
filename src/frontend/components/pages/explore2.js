@@ -43,9 +43,9 @@ const Explore = (props) => {
     return (
         <div>
             <GlobalStyles/>
-            <section style={{ marginLeft: '150px', marginRight: '150px' }}>
+            <section style={{ marginLeft: '50px', marginRight: '50px' }}>
                     <div className='row'>
-                        <div className="spacer-double"></div>
+                        {/* <div className="spacer-double"></div> */}
 
                         <div className='col-md-3'>
                             <div className="item_filter_group">

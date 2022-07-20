@@ -166,12 +166,12 @@ const Audio = styled.audio`
                         <div className="nft__item_price">
                             {item?.price} {' '} {item?.unitPrice}<span>{item?.bid}</span>
                         </div>
-                        <div className="nft__item_action">
+                        {/* <div className="nft__item_action">
                             <span onClick={()=> window.open("/#", "_self")}>Purchase on Opensea</span>
-                        </div>
-                        <div className="nft__item_like">
+                        </div> */}
+                        {/* <div className="nft__item_like">
                             <i className="fa fa-heart"></i><span>{item?.likes}</span>
-                        </div>                                 
+                        </div>                                  */}
                     </div> 
                 </div>
         </div>

@@ -34,6 +34,7 @@ import store from "../store/store";
 import { Provider } from "react-redux";
 
 import { createGlobalStyle } from 'styled-components';
+import Staking from './pages/Staking';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -89,6 +90,7 @@ const app= () => (
           <Create path="/create" />
           <Auction path="/Auction" />
           <Activity path="/activity" />
+          <Staking path="/staking" />
           <Contact path="/contact" />
           <ElegantIcons path="/elegantIcons" />
           <EtlineIcons path="/etlineIcons" />

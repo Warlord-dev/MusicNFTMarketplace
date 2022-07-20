@@ -4229,3 +4229,37 @@ img.img-rounded{
 .nowrap {
   white-space: nowrap;
 }
+
+.colorful {
+  background: radial-gradient(circle at bottom, rgba(255, 2, 184, 0.5), rgba(225, 38, 255, 0)) no-repeat border-box, linear-gradient(to right, rgb(223, 254, 36), rgb(253, 252, 71)) no-repeat border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wrapper-staking {
+  display: flex;
+  justify-content: center;
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at bottom, rgba(255, 2, 184, 0.5), rgba(225, 38, 255, 0)) no-repeat border-box, linear-gradient(to right, #dffe24, #fdfc47) no-repeat border-box;
+    padding: 16px 20px;
+    border-radius: 4px;
+    color: #1d1d1f;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 19px;
+    text-align: center;
+    transition: all 0.125s ease;
+    height: 52px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    max-width: 170px;
+
+    &:hover {
+      background: radial-gradient(circle at bottom, rgba(255, 2, 184, 0.8), rgba(225, 38, 255, 0)) no-repeat border-box, linear-gradient(to right, rgb(223, 254, 36), rgb(253, 252, 71)) no-repeat border-box;
+    }
+  }
+}

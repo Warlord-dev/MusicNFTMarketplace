@@ -230,7 +230,7 @@ const Header = function () {
                     </div>
 
                     <div className='navbar-item'>
-                      <NavLink to="/activity">
+                      <NavLink to="/staking">
                         Staking
                         <span className='lines'></span>
                       </NavLink>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Collections, DummyAuthors, topAuthorIds } from '../../data/Collections';
+import { DummyAuthors, topAuthorIds } from '../../data/Collections';
 
 function Authorlist() {
     const [ topAuthors, setTopAuthors ] = useState([]);

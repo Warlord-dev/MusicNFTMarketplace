@@ -1696,7 +1696,7 @@ export const DummyAuthors = [
         name: "The punk Rocker",
         twitter: "",
         avatar: "/img/author/ThePunkRocker.jpg",
-        followers: 201,
+        followers: 12,
         background: "/img/collections/rockPunk/AtionRock.gif"
     },
     {
@@ -1712,7 +1712,7 @@ export const DummyAuthors = [
         name: "Pat junior",
         twitter: "",
         avatar: "/img/author/patJunior.webp",
-        followers: 247,
+        followers: 1000,
         background: "https://pbs.twimg.com/profile_banners/420013363/1655734370/1500x500",
         twitter: {
             link: "https://twitter.com/iampatjuni0r",
@@ -1834,4 +1834,4 @@ export const DummyAuthors = [
     }
 ];
 
-export const topAuthorIds = [12, 13, 14, 9, 5, 1, 2]
+export const topAuthorIds = [14, 15, 12, 13, 5, 1, 2]
