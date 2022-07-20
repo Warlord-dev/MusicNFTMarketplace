@@ -180,7 +180,7 @@ const Header = function () {
                         </div>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/#">
+                      <NavLink to="/musicverse">
                         MusicVerse
                         <span className='lines'></span>
                       </NavLink>
@@ -223,7 +223,7 @@ const Header = function () {
                         </div>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/#">
+                      <NavLink to="/musicverse">
                         MusicVerse
                         <span className='lines'></span>
                       </NavLink>
