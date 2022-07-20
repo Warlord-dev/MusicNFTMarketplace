@@ -57,7 +57,11 @@ const NftSales = () => {
 
             <div className="col-3 mb-3 mnft-sale">
                 <div className="wrapper-author-image" >
-                  <div className='author-image' style={{ backgroundImage: 'url("/img/author/ImanEurope.jpg")'}} />
+                  <div
+                    className='author-image'
+                    style={{ backgroundImage: 'url("/img/author/ImanEurope.jpg")'}}
+                    onClick={() => window.open("/Author/13", "_self")}
+                  />
                 </div>
                 <div className='mnft-sale__collections'>
                   <div className='mnft-sale__author-name'>Iman Europe</div>
