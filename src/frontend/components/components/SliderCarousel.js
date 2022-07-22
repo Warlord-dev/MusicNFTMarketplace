@@ -76,12 +76,12 @@ export default class Responsive extends Component {
               <div className="nft_pic">                            
                   <span>
                       <span className="nft_pic_info">
-                          <span className="nft_pic_title">live Arts</span>
+                          <span className="nft_pic_title nowrap">Metaverse Virtual Concert</span>
                           <span className="nft_pic_by">Nicholas Daniels</span>
                       </span>
                   </span>
                   <div className="nft_pic_wrap">
-                      <img src="./img/carousel/crs-5.jpg" className="lazy img-fluid" alt=""/>
+                      <img src="./img/carousel/crs-5.jpg" className="lazy" alt=""/>
                   </div>
               </div>
             </CustomSlide>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Particle from '../components/Particle';
 import SliderMainParticle from '../components/SliderMainParticle';
+import SliderMain from '../components/SliderCarousel';
 import FeatureBox from '../components/FeatureBox';
 import CarouselCollection from '../components/CarouselCollection';
 import CarouselNew from '../components/CarouselNew';
@@ -9,6 +10,7 @@ import Footer from '../components/footer';
 import News from "./news";
 import { createGlobalStyle } from 'styled-components';
 import NftSales from '../components/NftSales';
+import Upcomming from '../components/Upcomming';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader .logo .d-block{
@@ -170,6 +172,42 @@ const homeone = ({ location }) => {
                     </div>
                         <div className='col-lg-12'>
                         <CarouselCollection/>
+                        </div>
+                    </div>
+                </section>
+
+                <section className='container no-top no-bottom'>
+                    <div className='row'>
+                    <div className="spacer-double"></div>
+                    <div className='col-lg-12 mb-2'>
+                        <h2>Upcomming</h2>
+                    </div>
+                        <div className='col-lg-12'>
+                          <Upcomming />
+                        </div>
+                    </div>
+                </section>
+
+                <section className='container no-top no-bottom'>
+                  <div className='col-lg-12 mb-2'>
+                      <h2>KYC CERTIFICATE</h2>
+                  </div>
+                  <div className='row justify-content-center'>
+                    
+                    <div className='col-lg-6 col-md-12'>
+                      <img src="/img/cert.png" className='w-100' />
+                    </div>
+                  </div>
+                </section>
+
+                <section className='container no-top no-bottom'>
+                    <div className='row'>
+                    <div className="spacer-double"></div>
+                    <div className='col-lg-12 mb-2'>
+                        <h2>Tokenomics</h2>
+                    </div>
+                        <div className='col-lg-6 row justify-content-center'>
+                          <img src="https://www.metfx.io/assets/images/585x550.png" className='w-100'/>
                         </div>
                     </div>
                 </section>

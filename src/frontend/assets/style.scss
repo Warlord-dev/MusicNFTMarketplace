@@ -4271,3 +4271,54 @@ img.img-rounded{
     line-height: 1.7em;
   }
 }
+
+.appstore {
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.upcomming-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 250px;
+    border-radius: 50%;
+    
+  }
+}
+
+.itm {
+  &:hover .itm__wrapper-features {
+    color: #B500E1 !important;
+  }
+}
+
+.itm__wrapper-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+
+  .features-text {
+    font-family: agency fb;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  .release-date {
+    color: #c2d4f8;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

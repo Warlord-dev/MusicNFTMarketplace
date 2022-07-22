@@ -73,6 +73,12 @@ const slidermainparticle= () => (
                           </div>
                       </div>
               </div>
+
+              <div className='row'>
+                <div className='col-12'>Incomming soon</div>
+                <div className='appstore col-6' style={{ backgroundImage: 'url("/img/socialNetwork/applestore.png")' }}></div>
+                <div className='appstore col-6' style={{ backgroundImage: 'url("/img/socialNetwork/googlePlay.png")' }}></div>
+              </div>
               </Reveal>
           </div>
           <div className="col-md-6 xs-hide">
